@@ -1,0 +1,27 @@
+<%= stylesheet_link_tag "home" %>
+<div class="col-sm-12 col-md-6 col-lg-6">
+	<div class="homebox" 
+	style="
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;">
+		<%= image_tag "view/rsz_kula_login.jpg", id: "workimg", class: "homeimg_work blur" %><div class="homecap">Check out some of my past projects</div>
+	</div>
+
+	<div class="homebox"><%= image_tag "trumpet.jpg", id: "aboutimg", class: "homeimg_work blur" %><div class="homecap">Learn a little more about me as a person</div>
+	</div>
+
+	<div class="homebox"
+	style="
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;">
+		<%= image_tag "resume-small.png", id: "resumeimg", class: "homeimg_work blur" %><div class="homecap">View and download a copy of my resum&#233;</div>
+	</div>
+</div>
+<div class="col-sm-12 col-md-6 col-lg-6 timeline-container">
+<a class="twitter-timeline" href="https://twitter.com/KackJohn" height="732" data-widget-id="530835711360892928">Tweets by @KackJohn</a>
+</div>
+<%= javascript_include_tag "homeimagebox" %>
+<script>
+	$("#home-nav").addClass("active");
+</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

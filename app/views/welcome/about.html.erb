@@ -1,0 +1,42 @@
+<%= stylesheet_link_tag "about" %>
+<h1 class="about-title">WORK</h1>
+<div class="about-info row">
+	<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+		<p>My freshman year, I was an undeclared engineer. At ISU, that means you take core classes along with a special course designed to give you an idea of the various engineering disciplines. We spent 4 weeks with Visual Basic, which marked the first experience I'd had with programming. Needless to say, I loved it! After 2 years of classwork and almost 2 years at <a class="redlink" target="new" href="http://www.mavericksoftwareconsulting.com">Maverick Software Consulting</a>, I've found that I like to be challenged with a variety of problems. Whether it's a bug or an enhancement, I enjoy combining my own experience with online resources to implement a unique solution. 
+			Web development is where I've had the most experience, and also what I've enjoyed most. </p>
+			<p>During the summer before my last semester, I took advantage of a great opportunity to work for Amazon as an SDE Intern. Working with the logistics org, I helped develop an internal tool to help with route simulations for the Fresh delivery service. 
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 img-container">
+			<%= image_tag "maverick.jpg", id: "workimg", class: "img-work" %>
+			<%= image_tag "amazon.png", id: "workimg", class: "img-work img-amazon" %>
+		</div>
+	</div>
+	<h1 class="about-title">PLAY</h1>
+	<div class="about-info row">
+		<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+			<%= image_tag "trumpet.jpg", id: "workimg", class: "trumpet aboutimage", style: "width: 100%" %>
+		</div>
+		<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+			<p>When I'm not developing software, I like to relax with friends here at Iowa State. We like to tailgate, play basketball, argue about our fantasy football league, and sit on the porch when the weather's nice. Sounds like your typical Iowan right? I grew up in Cedar Rapids, Iowa (population 120k), which is a lot like many Midwestern cities &#8212; quiet, safe, with a culture of hard work.
+			</p>
+			<p> 
+				I started playing the trumpet when I was 10, and I still like to play today. During every semester but one, I've been a member of ISU's jazz band, mainly because it's challenging, fun, and completely different than the rest of my tech-filled days. 
+			</p>
+		</div>
+	</div>
+	<h1 style="margin-top:45px" class="about-title">FUTURE</h1>
+	<div class="about-info">
+		<p style="">I would love to move to a big, fast-paced city with lots of culture, and to keep playing trumpet on the side. Seattle and Austin are at the top of my wish list, but there are so many other places it's hard to give them all thought. 
+			Given a choice, I'd love to work in web development and use the latest tools to collaborate on big applications, particularly in the mobile setting. </p>
+			<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+			<%= image_tag "seattlelong.jpg", id: "workimg", class: "img-seattle aboutimage" %><div class="caption">- LTphotographs
+			</div>
+		</div>
+	</div>
+	<script>
+		$("#about-nav").addClass("active");
+		$('.maverick').click(function() {
+			window.location = "http://www.mavericksoftwareconsulting.com"
+		});
+	</script>

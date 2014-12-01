@@ -1,0 +1,150 @@
+$menu-hover-color: #2c3e50;
+
+#sitecontainer {
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: translate3d(0,0,0);
+	float:left;
+	display: inline-block;
+	height: 95%;
+	margin-top: 40px;
+	position: relative;
+	margin-left: 15px;
+	width: 100%;
+}
+#piccontainer {
+	position: relative;
+	height: 410px;
+	top: 12px;
+	margin-left: 15px;
+	width:100%;
+	background-color: #eeeefa;
+}
+.skillimage {
+	display:inline;
+	position: relative;
+}
+.skillimage img { 
+	max-height: 18px; 
+	margin-left: 6px; 
+	margin-right: 6px; 
+	margin-top: 2px; 
+	margin-bottom: 2px;
+}
+.sitemenu {
+	display:inline-block;
+	list-style: none;
+	min-width: 142px;
+	width: 100%;
+	padding-left: 0;
+	margin-top: 10px;
+	float: left;
+}
+
+.IEsite {
+	position: relative;
+	left: -40px !important;
+}
+.sitemenu li {
+	cursor: pointer;
+	padding: 4px;
+}
+.sitemenu li:hover {
+	color: white;
+	background-color: $menu-hover-color;
+}
+
+.selected {
+	color: white;
+	background-color: $menu-hover-color;	
+}
+
+.worktitle {
+	font-size: 28px;
+	min-height: 75px;
+	display: inline;
+	float: left;
+	position: relative;
+	line-height: 39px;
+	padding: 0 !important;
+}
+.worktitle td {	
+	font-size: 28px;
+	height: 75px;
+	vertical-align: bottom;
+}
+.tasks {
+	float:left;	
+	padding-top:10px;
+}
+.thumb-list {	
+	list-style-type: none;
+	padding: 5px;
+	background-color: $menu-hover-color;
+	height: 100%;
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+#piccontainer li img {
+	width: 60px;	
+	border: 1px solid white;
+	cursor: pointer;
+}
+.left li {	
+	height: 48px;
+}
+.right li {	
+	height: 52px;
+}
+.fullpic {	
+	position: absolute;
+	width: 72%;
+	margin-left: 14%;
+	height: 405px;
+	text-align: center;
+}
+#imgcont {
+	display: inline-block;
+	position: relative;
+	top: 20px;
+	max-width:525px;
+	height: auto !important;
+	-webkit-box-shadow: 0px 9px 21px rgba(0, 0, 0, 0.72);
+	-moz-box-shadow:    0px 9px 21px rgba(0, 0, 0, 0.72);
+	box-shadow:         0px 9px 21px rgba(0, 0, 0, 0.72);
+}
+#imgcont img {	
+	display: block;
+	width: 100%;
+}
+.leftarrow {
+	background: url('/images/leftarrow.png');
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	top: 162px;
+	left: -15px;
+	background-position: -8px;
+}
+.rightarrow {
+	background-image: url('/images/rightarrow.png');
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	top: 22px;
+	left: 745px;
+	background-position: -10px;
+}
+.langs {
+	float: right !important;
+	margin-top: 5px;
+	height: 75px;
+	background: white;
+	position: relative;
+	width: 352px !important;
+	padding: 0 !important;
+}

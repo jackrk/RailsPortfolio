@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <%= yield :head %>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <%= stylesheet_link_tag "layout" %>
+	    <!-- <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' /> -->
+	    <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" %>
+	    <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css" %>
+		<%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" %>
+	</head>
+    <body>
+        <div class="header-back"></div>
+		<div class="container container-adjusted">
+            <nav class="navbar navbar-default navbar-fixed-top navbar-centered" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="home">Jack Kohn</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse" style="background-color: #2C3E50;">
+                    <ul class="nav navbar-nav">
+                      <li id="home-nav"><a href="home">Home</a></li>
+                      <li id="about-nav"><a href="about">About</a></li>
+                      <li id="work-nav"><a href="work">Work</a></li>
+                      <li id="resume-nav"><a href="resume">Resum&#233;</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right navbar-contact">
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a target="_new" href="mailto:jack.royal.kohn@gmail.com">Email</a></li>
+                          <li><a target="_new" href="http://www.linkedin.com/pub/jack-kohn/48/952/278">LinkedIn</a></li>
+                          <li><a target="_new" href="http://github.com/jackrk">GitHub</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+            </nav>
+			<%= yield %>
+		</div>
+		<%= javascript_include_tag "jquery.transit.min" %>
+		<%= javascript_include_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" %>
+  </body>
+</html>
