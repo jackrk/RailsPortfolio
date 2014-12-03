@@ -7,7 +7,8 @@
 	    <!-- <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' /> -->
 	    <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" %>
 	    <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css" %>
-		<%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" %>
+      <%= javascript_include_tag :rails, :application %>
+      <%= csrf_meta_tags %>
 	</head>
     <body>
         <div class="header-back"></div>
@@ -28,9 +29,12 @@
                       <li id="work-nav"><a href="work">Work</a></li>
                       <li id="resume-nav"><a href="resume">Resum&#233;</a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right navbar-contact">
+                    <div id="comment-form" class="hidden-xs col-sm-5 col-md-7 col-lg-7 pull-right hide">
+                    </div>
+                    <ul id="navbar_right" class="nav navbar-nav navbar-right navbar-contact">
+                      <li id="show_comment_form"><a style="cursor: pointer">New Comment</a></li>
                       <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 19px !important">Contact <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                           <li><a target="_new" href="mailto:jack.royal.kohn@gmail.com">Email</a></li>
                           <li><a target="_new" href="http://www.linkedin.com/pub/jack-kohn/48/952/278">LinkedIn</a></li>
@@ -45,4 +49,52 @@
 		<%= javascript_include_tag "jquery.transit.min" %>
 		<%= javascript_include_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" %>
   </body>
+  <script>
+    function toggleCommentForm() {
+      $("#navbar_right").toggleClass("hide");
+      $("#comment-form").toggleClass("hide");
+    }
+
+    $(document).ready(function() {
+
+      $.ajaxSetup({
+        dataType: 'json'
+      })
+
+      var commentForm = $("#comment-form");
+      var navbar = $("#navbar_right");
+
+      //$("#comment-form").load("comments/2");
+      commentForm.load("comments/new");
+
+      $("#show_comment_form a").on("click", function() {
+        navbar.animate({
+            opacity: 0
+        }, 300);
+        setTimeout(function() {
+          toggleCommentForm();
+          commentForm.animate({
+              opacity: 1
+          }, 500);
+        }, 300);
+      });
+
+      $("#comment-form").on("click", "#cancel_comment", function() {
+        commentForm.animate({
+            opacity: 0
+        }, 300);
+        setTimeout(function() {
+          toggleCommentForm();
+          navbar.animate({
+              opacity: 1
+          }, 500);
+        }, 300);
+      });
+      //alert($("form.comment_hook").html());
+      $("#comment-form").on('ajax:success', "form.comment_hook", function(event, data, status, xhr) {
+        alert(data);
+      });
+
+    });
+  </script>
 </html>

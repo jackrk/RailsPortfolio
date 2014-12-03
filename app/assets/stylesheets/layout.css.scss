@@ -25,3 +25,22 @@
 .navbar li a {
 	font-size: 14px !important;
 }
+
+.comment-commenter {
+	font-weight: bold;
+}
+
+#comment-form {
+	min-width: 352px;
+	padding-top: 18px;
+	padding-left: 0px;
+	padding-right: 6px;
+	font-size: 14px;
+	color: white;
+	text-align: right;
+	opacity: 0;
+	-webkit-animation: opacity 1s infinite;
+	-moz-animation:    opacity 1s infinite;
+	-o-animation:      opacity 1s infinite;
+	animation:         opacity 1s infinite;
+}

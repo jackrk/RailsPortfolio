@@ -1,10 +1,11 @@
 .resumeimg {
 	position: relative;
 	top: -40px;
-	width: 80%;
+	width: 100%;
 }
 
 .download-bar {
-	position: fixed;
 	font-size: 20px;
+	display: block;
+	text-align: right;
 }

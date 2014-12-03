@@ -1,3 +1,49 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$form-background-color: #415161;
+
+.comment-field {
+	border: none;
+	background-color: $form-background-color;
+	border-radius: 4px;
+	height: 24px;
+	margin-right: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.comment-field-name {
+	width: 80px;
+}
+
+.comment-field-body {
+	width: 39%;
+}
+
+.comment-submit {
+	cursor: pointer;
+	background-color: transparent;
+	float: right;
+}
+
+.comment-submit:hover {
+	color: #3498DB;
+}
+
+.comment-new {
+	display: inline-block;
+	margin-left: 8px;
+}
+
+.comment-cancel {
+	display: inline-block;
+	padding-top: 2px;
+	width: 51px;
+	padding-left: 0px;
+}
+
+.comment-cancel:hover {
+	color: #E74C3C;
+}

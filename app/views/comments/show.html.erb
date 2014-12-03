@@ -1,9 +1,10 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= @comment.commenter %>
-</p>
- 
-<p>
-  <strong>Body:</strong>
+<%= stylesheet_link_tag "comments" %>
+<span class="comment-padding-fix">
   <%= @comment.body %>
-</p>
+</span>
+
+<span class="comment-padding-fix">
+  |&nbsp;<strong><%= @comment.commenter %></strong>
+</span>
+
+<span class="comment-field comment-submit comment-new comment-padding-fix pull-right">New Comment</span>
